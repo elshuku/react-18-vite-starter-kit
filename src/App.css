@@ -1,0 +1,56 @@
+@tailwind components;
+
+@layer components {
+  /**
+   * Navigation
+   */
+  .top-nav {
+    @apply p-2 w-full bg-bg-nav;
+  }
+
+  .top-nav--ul {
+    @apply flex flex-row justify-center items-center;
+  }
+
+  .top-nav--ul--li {
+    @apply basis-56 text-center p-2;
+  }
+
+  .nav-link {
+    @apply text-txt-primary;
+  }
+
+  .footer {
+    @apply border-t-2 border-solid border-gray-300;
+  }
+
+  .footer-link {
+    @apply basis-56 text-txt-secondary underline text-sm;
+  }
+
+  /**
+   * Errors and warnings
+   */
+  .error-message {
+    @apply border-2 border-solid border-error/80 p-3 text-white bg-error rounded;
+  }
+
+  /**
+ * forms
+ */
+  div.input-field {
+    @apply relative h-11 w-full min-w-[200px];
+  }
+
+  input[type=text].input,
+  input[type=email].input,
+  input[type=number].input
+  {
+    @apply w-full border-b border-input/20 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-input/70 outline outline-0 transition-all placeholder-shown:border-input/20 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-input/5 placeholder:opacity-0 focus:placeholder:opacity-100
+  }
+
+  label.standard {
+    @apply pointer-events-none -top-1.5 absolute left-0 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-input/50 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-input/50;
+  }
+
+}
